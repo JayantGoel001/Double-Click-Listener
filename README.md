@@ -31,6 +31,40 @@ Add it in your root build.gradle at the end of repositories:
 	<span class="token punctuation">}</span>
 </code></pre>
 
+
+# Basic Usage 
+
+
+<p>The class <code>DoubleClickListener</code> extends from <code>View.OnClickListener</code> so, just call the <code>DoubleClickListener</code> class on your onClickListener
+of the view that you wish to listen, and pass an object of <code>DoubleClickListener.Callback</code> class to listen the events.</p>
+
+* **Kotlin**
+
+<pre><code>    button.setOnClickListener(
+        DoubleClickListener(
+            callback = object : DoubleClickListener.Callback {
+                override fun doubleClicked() {
+                
+                }
+            }
+        )
+    )
+</code></pre>
+
+
+* **Java**
+
+<pre><code>    button.setOnClickListener(
+        DoubleClickListener(
+            new DoubleClickListener.Callback {
+                override fun doubleClicked() {
+                
+                }
+            }
+        )
+    )
+</code></pre>
+
 <p>Share this release:</p>
 
 [![](https://jitpack.io/v/CormacKrum/Double-Click-Listener.svg)](https://jitpack.io/#CormacKrum/Double-Click-Listener)
