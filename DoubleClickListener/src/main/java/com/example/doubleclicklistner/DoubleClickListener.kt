@@ -2,12 +2,7 @@ package com.example.doubleclicklistner
 
 import android.view.View
 
-class DoubleClickListener(private val callback: setOnDoubleClickListener= object :
-    setOnDoubleClickListener {
-    override fun doubleClicked() {
-
-    }
-}, private val doubleClickTimeLimit:Long=1000) :
+class DoubleClickListener(private val callback: setOnDoubleClickListener, private val doubleClickTimeLimit:Long=1000) :
     View.OnClickListener {
     private var lastClicked:Long = -1L
     override fun onClick(v: View?) {
