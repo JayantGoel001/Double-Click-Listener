@@ -36,7 +36,7 @@ Add it in your root build.gradle at the end of repositories:
 
 
 <p>The class <code>DoubleClickListener</code> extends from <code>View.OnClickListener</code> so, just call the <code>DoubleClickListener</code> class on your onClickListener
-of the view that you wish to listen, and pass an object of <code>DoubleClickListener.Callback</code> class to listen the events.</p>
+of the view that you wish to listen, and pass an object of <code>DoubleClickListener.Callback</code> class to listen the events.You can also add custom time difference betweens click by default is 1000ms.</p>
 
 * **Kotlin**
 
@@ -46,7 +46,7 @@ of the view that you wish to listen, and pass an object of <code>DoubleClickList
                 override fun doubleClicked() {
                 
                 }
-            }
+            },1000
         )
     )
 </code></pre>
@@ -60,7 +60,7 @@ of the view that you wish to listen, and pass an object of <code>DoubleClickList
                 override fun doubleClicked() {
                 
                 }
-            }
+            },1000
         )
     )
 </code></pre>
