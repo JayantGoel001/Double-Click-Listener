@@ -1,0 +1,3 @@
+include ':DoubleClickListner'
+include ':app'
+rootProject.name = "Double Click Listener"
