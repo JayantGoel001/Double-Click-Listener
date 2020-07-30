@@ -2,7 +2,7 @@ package com.example.doubleclicklistner
 
 import android.view.View
 
-class DoubleClickListener(private val callback: Callback,private val doubleClickTimeLimit:Long=1000) :
+class DoubleClickListener(private val callback: setOnDoubleClickListener,private val doubleClickTimeLimit:Long=1000) :
     View.OnClickListener {
     private var lastClicked:Long = -1L
     override fun onClick(v: View?) {
@@ -26,9 +26,10 @@ class DoubleClickListener(private val callback: Callback,private val doubleClick
     private fun isDoubleClicked():Boolean{
         return getTimeDifference(lastClicked,System.currentTimeMillis())<=doubleClickTimeLimit
     }
-    interface Callback{
+    interface setOnDoubleClickListener{
         fun doubleClicked()
     }
+
 
 
 
